@@ -4,6 +4,8 @@ It's a simple snake game project made in JavaScript, CSS and a little of HTML.
 
 This game was done in purpose of my personal training with JavaScript.
 
+# [Play here](https://oaojrocha.github.io/SimpleSnakeGame/)
+
 ---
 ## Basic Information
 *Basic "any snake game information"*
