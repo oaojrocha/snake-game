@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script language="JavaScript" type="text/javascript" defer="defer" src="js/jquery-2.2.4.min.js"></script>
+		<script language="JavaScript" type="text/javascript" defer="defer" src="js/game.js"></script> 
+		<title>Simple Snake - The Game</title>
+		
+		<link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+	</head>
+	
+	<body onload="game.init()" style=" background-color: white;">
+		<div class="score-board">
+			<a class="score" >Score: 0</a>
+			<button type="button" onclick="game.doPause()">PAUSE</button>
+			<button type="button" onclick="game.doWalk()">CONTINUE</button>
+		</div>
+		<div class="principal" id='principal'></div>
+	</body>
+</html>

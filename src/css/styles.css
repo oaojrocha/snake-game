@@ -1,0 +1,62 @@
+.principal {
+	max-width: 340px;
+}
+
+.linha {
+	display: inline-flex;
+}
+
+.coluna {
+	width: 15px;
+	height: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.score-board {
+    display: inline-block;
+    width: 340px;
+    background-color: rgb(0, 61, 103);
+    vertical-align: middle;
+    height: 30px;
+    border-bottom: 1px solid white;
+    align-items: center;
+}	
+
+.score-board a {
+    font-family: "Arial Black", Gadget, sans-serif;
+	color: white;
+    margin: 5px;
+}
+
+.score-board button {
+    float: right;
+    margin: 5px;	
+}
+
+.s1000 {
+	color: fuchsia;
+}
+
+.s2000 {
+	color: lime;
+}
+
+.snake-head {
+	background-color: #159815;
+}
+
+.snake-body {
+	background-color: #116d11;
+}
+
+.snake-tail {
+	background-color: #052d05;
+}
+
+.score-in {
+	background-color: #2bdcd2;
+}
+
+.clean {
+	background-color: black;
+}
