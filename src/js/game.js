@@ -20,7 +20,6 @@
 			$('.score').text("Score: " + score);
 
 			game.createMap();
-			game.createOptions();
 			
 			clearInterval(gameInterval);
 			
@@ -46,21 +45,17 @@
 				html += '</div>';
 			}
 
-			$('#principal').appendTo('body').html(html);
-		},
-		
-		createOptions : function(){
-			$('#pause').appendTo('body').html('<button type="button" onclick="game.doPause()">PAUSE</button>');
-			$('#continue').appendTo('body').html('<button type="button" onclick="game.doWalk()">CONTINUE</button>');
-			
+			$('#principal').html(html);
 		},
 		
 		doPause : function(){
 			clearInterval(gameInterval);
 		},
 		
+		
 		doWalk : function() {
 			
+			game.doPause(); // clear the interval
  			gameInterval = setInterval(function(){
 				var atualX = parseInt(snake[0].split("_")[0]);
 				var atualY = parseInt(snake[0].split("_")[1]);
@@ -77,7 +72,8 @@
 				
 				// Valida se saiu do mapa ou não
 				if (atualY < 0 || atualY === MAP_SIZE || atualX < 0 || atualX === MAP_SIZE ){
-					//$('#principal').appendTo('body').html('<div><p>You Lose!<p></div>');
+					// $('#principal').appendTo('body').html('<div><p>You
+					// Lose!<p></div>');
 					game.init();
 					return;
 				}
@@ -92,7 +88,8 @@
 				}
 				
 				if ($('#coluna' + snake[0]).hasClass("snake-body")){
-					//$('#principal').appendTo('body').html('<div><p>You Lose!<p></div>');
+					// $('#principal').appendTo('body').html('<div><p>You
+					// Lose!<p></div>');
 					game.init();
 					return;
 				}
@@ -155,26 +152,36 @@
 			
 			$(document).on('keyup', function (e) {
 				if (e.which === DIRECTION_LEFT) {
-					
-					if(actualDirection !== DIRECTION_RIGHT)
-						actualDirection = DIRECTION_LEFT;
-					
+					game.goLeft();
 				} else if (e.which === DIRECTION_RIGHT) { 
-					
-					if(actualDirection !== DIRECTION_LEFT)
-						actualDirection = DIRECTION_RIGHT;
-					
+					game.goRight();
 				} else if (e.which === DIRECTION_UP) {
-					
-					if(actualDirection !== DIRECTION_DOWN)
-						actualDirection = DIRECTION_UP;
-					
-				} else if (e.which === DIRECTION_DOWN) { 
-					
-					if(actualDirection !== DIRECTION_UP)
-						actualDirection = DIRECTION_DOWN;
+					game.goUp();
+				} else if (e.which === DIRECTION_DOWN) {
+					game.goDown();
 				}
 			});
 			
+		},
+		
+		goUp : function() {
+			if (actualDirection !== DIRECTION_DOWN)
+				actualDirection = DIRECTION_UP;
+		},
+		
+		goDown : function() {
+			if (actualDirection !== DIRECTION_UP)
+				actualDirection = DIRECTION_DOWN;
+		},
+		
+		goLeft : function() {
+			if(actualDirection !== DIRECTION_RIGHT)
+				actualDirection = DIRECTION_LEFT;
+		},
+		
+		goRight : function() {
+			if(actualDirection !== DIRECTION_LEFT)
+				actualDirection = DIRECTION_RIGHT;
 		}
+		
 	}

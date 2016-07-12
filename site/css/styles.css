@@ -4,6 +4,10 @@
   margin: auto;
 }
 
+.white-font {
+	color: white;
+}
+
 .score-board {
 	width: inherit;
     display: inherit;
@@ -14,10 +18,27 @@
 	font-size: xx-large;
 }
 
+.btn-arrow {
+	visibility: hidden;
+}
+@media (max-width: 768px){
+	.btn-arrow {
+		width: 60px;
+		height: 60px;
+		visibility: visible;
+	}	
+}
+
+.center-itens {
+    display: table;
+    margin: 10px auto;
+}
+
 .navbar-default {
   background-color: #051221;
   border-color: #124d90;
   background-image: none;
+  margin-bottom: 0px;
 }
 
 .navbar-default .navbar-brand {
