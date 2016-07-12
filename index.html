@@ -1,25 +1,49 @@
 <html>
 	<head>
+		<title>Simple Snake - The Game</title>
+		<!-- Game imports -->
 		<script language="JavaScript" type="text/javascript" defer="defer" src="src/js/jquery-2.2.4.min.js"></script>
 		<script language="JavaScript" type="text/javascript" defer="defer" src="src/js/game.js"></script> 
-		<title>Simple Snake - The Game</title>
-		
 		<link rel="stylesheet" type="text/css" media="all" href="src/css/styles.css">
+		
+		<!-- Bootstrap imports -->
+		<script language="JavaScript" type="text/javascript" defer="defer" src="site/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="site/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" media="all" href="site/css/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" media="all" href="site/css/styles.css">
 	</head>
 	
-	<body onload="game.init()" style=" background-color: white;">
+	<body onload="game.init()" style=" background-color: black;">
 	
-		<div class="header">
-		</div>
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand">Simple Snake Game</a>
+		    </div>
+		
+		    <div class="collapse navbar-collapse" id="navbar-menu">
+		      <ul class="nav navbar-nav">
+		        <li><a href="#">Get it on GitHub</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		
 	
 	
-		<div class="score-board">
+		<div class="navbar navbar-default score-board">
 			<a class="score" >Score: 0</a>
-			<button type="button" onclick="game.doPause()">PAUSE</button>
-			<button type="button" onclick="game.doWalk()">CONTINUE</button>
+			<button class="btn btn-info glyphicon glyphicon-pause" type="button" onclick="game.doPause()"></button>
+			<button class="btn btn-info glyphicon glyphicon-play" type="button" onclick="game.doWalk()"></button>
 		</div>
 		<div class="principal" id='principal'></div>
-		
+	
 		
 		
 	</body>
