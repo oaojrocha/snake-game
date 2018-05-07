@@ -1,14 +1,13 @@
-# SimpleSnakeGame
+# snake-game
 
 It's a simple snake game project made in JavaScript, CSS and a little of HTML.
 
 This game was done in purpose of my personal training with JavaScript.
 
-# [Play here](https://oaojrocha.github.io/SimpleSnakeGame/)
+# [Play here](https://oaojrocha.github.io/snake-game/)
 
 ---
 ## Basic Information
-*Basic "any snake game information"*
 
 * The way to increase your score is by 'eating' the score points, its a blue point;
 * The map (matrix) is your limit, when your crash into you lose all your score;
